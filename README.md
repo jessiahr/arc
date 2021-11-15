@@ -15,7 +15,7 @@ Make a config file somewhere with json like this:
     "to": "/some_path/Backups"
   },
     {
-    "title": "notes older",
+    "title": "notes folder",
     "from": "/home/some_home/Desktop/notes",
     "to": "/some_path/Backups"
   },
@@ -29,4 +29,16 @@ Make a config file somewhere with json like this:
 
 ## Run
 Start the task by passing a config path to the arc binary:
-`./arc /media/some_path/Arcfile
+`./arc /media/some_path/Arcfile`
+
+Each task is run in parallel, logs are printed to std out and the final results are shown when all tasks have finished:
+```
+Task:   Dev folder
+Status: 3 events
+
+Task:   notes folder
+Status: 3 events
+
+Task:   specific file
+Status: 5 events
+```
